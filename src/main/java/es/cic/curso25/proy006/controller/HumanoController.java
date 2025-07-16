@@ -1,4 +1,4 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import es.cic.curso25.proy006.model.Humano;
+import es.cic.curso25.proy006.model.Organo;
+import es.cic.curso25.proy006.service.HumanoService;
 
 @RestController
 @RequestMapping("/humanos")

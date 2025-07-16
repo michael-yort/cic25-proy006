@@ -1,4 +1,4 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.model;
 
 public class Organo {
     private String nombre;

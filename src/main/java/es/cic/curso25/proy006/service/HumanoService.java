@@ -1,4 +1,4 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.service;
 
 
 import java.util.Arrays;
@@ -7,6 +7,9 @@ import java.util.Optional;
 import java.util.Random;
 
 import org.springframework.stereotype.Service;
+
+import es.cic.curso25.proy006.model.Humano;
+import es.cic.curso25.proy006.model.Organo;
 
 @Service
 public class HumanoService {
