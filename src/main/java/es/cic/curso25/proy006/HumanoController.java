@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/humanos")
 public class HumanoController {
+//Es necesario para que Springboot cree mi objeto HumanoService.   
 @Autowired
     private HumanoService humanoService;
     //private HumanoService humanoService = new HumanoService();
