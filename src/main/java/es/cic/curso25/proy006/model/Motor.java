@@ -1,13 +1,36 @@
 package es.cic.curso25.proy006.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 
-
+@Entity
+@Table(name = "MAQUINA")
 public class Motor {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+
+    //Para controlar la concurrencia
+    @Version
+    private long version;
+
+    @Column(name = "potencias")
     private double potencia;
+
+    //Un unique es un Indice del cual poder usar para buscar
+    @Column(length = 4, unique = true)
     private String marca;
+
+
     private boolean encendido;
+
+    
 
     public Long getId() {
         return id;
@@ -39,6 +62,14 @@ public class Motor {
 
     public void setEncendido(boolean encendido) {
         this.encendido = encendido;
+    }
+
+     public long getVersion() {
+        return version;
+    }
+
+    public void setVersion(long version) {
+        this.version = version;
     }
 
 }
